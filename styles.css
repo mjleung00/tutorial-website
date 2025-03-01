@@ -188,7 +188,7 @@
     }
 
     #mobile-menu.is-active .bar:nth-child(3) {  /* spinny effect on the bars on hamburger menu icon */
-        transform: translateY(8px) rotate(-45deg);
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
 
