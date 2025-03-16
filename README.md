@@ -1,0 +1,1 @@
+This is a project for dipping my toes into HTML, CSS, and JavaScript by creating a website, following Brian Design's YouTube tutorial. While closely following this tutorial at the start, contents may be modified/personalized as I continue to play around.
