@@ -17,6 +17,7 @@ const highlightMenu = () => {
     const aboutMenu = document.querySelector('#about-page');
     const servicesMenu = document.querySelector('#services-page');
     let scrollPos = window.scrollY;    // Track vertical scroll position on website
+    console.log(scrollPos);
 
     // adds 'highlight' class to menu items ONLY if on desktop (i.e. not mobile)
     if(window.innerWidth > 960 && scrollPos < 600) {
