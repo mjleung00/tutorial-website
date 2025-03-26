@@ -17,7 +17,6 @@ const highlightMenu = () => {
     const aboutMenu = document.querySelector('#about-page');
     const servicesMenu = document.querySelector('#services-page');
     let scrollPos = window.scrollY;    // Track vertical scroll position on website
-    console.log(scrollPos);
 
     // adds 'highlight' class to menu items ONLY if on desktop (i.e. not mobile)
     if(window.innerWidth > 960 && scrollPos < 600) {
@@ -29,7 +28,7 @@ const highlightMenu = () => {
         servicesMenu.classList.remove('highlight');
         homeMenu.classList.remove('highlight');
         return;
-    } else if (window.innerWidth > 960 && scrollPos > 1400) {
+    } else if (window.innerWidth > 960 && scrollPos < 2345) {
         servicesMenu.classList.add('highlight');
         aboutMenu.classList.remove('highlight');
         return;
@@ -41,4 +40,16 @@ const highlightMenu = () => {
 }
 
 window.addEventListener('scroll', highlightMenu);
-window.addEventListener('click', document.querySelector('#navbar__logo'));
+window.addEventListener('click', highlightMenu);
+
+// Close mobile menu on click of menu item
+const hideMobileMenu = () => {
+    const menuBars = document.querySelector('.is-active');
+    if (window.innerWidth <= 960 && menuBars) {
+        menu.classList.toggle('is-active');
+        menuLinks.classList.remove('active');
+    }
+};
+
+menuLinks.addEventListener('click', hideMobileMenu);
+navLogo.addEventListener('click', hideMobileMenu);
